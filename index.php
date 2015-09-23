@@ -23,8 +23,8 @@ $articles = [
 
 /* -------------------------- ОТОБРАЖЕНИЕ ------------ */ ob_start(); ?>
 
-<h2>Главная страница</h2>
+<h2>Сайт в стадии разработки</h2>
 <hr />
-<? foreach ($articles as $article) e('articles/widget', $article); ?>
+<? //foreach ($articles as $article) e('articles/widget', $article); ?>
 
 <?php require PHIX_CORE . '/render_view.php';
