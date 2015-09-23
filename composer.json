@@ -1,0 +1,7 @@
+{
+    "require": {
+        "phizio/phix": "^1.0",
+        "monstrum/jcrop": "^2.0",
+        "blueimp/jquery-file-upload": "^9.11"
+    }
+}
