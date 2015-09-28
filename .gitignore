@@ -2,7 +2,7 @@
 .idea/
 
 # Config file
-config.php
+# config.php
 
 # non-use folders
 vendor/

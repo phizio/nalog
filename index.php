@@ -1,30 +1,19 @@
 <?php require_once 'config.php';
+require_once 'config_for_frontend.php';
+
 /* ----------------------- ПАРАМЕТРЫ СТРАНИЦЫ ----------------------- */
 $page['title'] = 'Главная';
 $page['desc'] = 'Главная страница сайта';
+$page['template'] = 'frontend/layout';
 
 
 /* ---------------------- КОНТРОЛЛЕР СТРАНИЦЫ ----------------------- */
-$articles = [
-    0 => [
-        'name' => 'Первая статья',
-        'desc' => 'Краткое содержание первой статьи',
-    ],
-    1 => [
-        'name' => 'Вторая статья',
-        'desc' => 'Краткое содержание второй статьи',
-    ],
-    2 => [
-        'name' => 'Третья статья',
-        'desc' => 'Краткое содержание третьей статьи',
-    ],
-];
 
 
 /* -------------------------- ОТОБРАЖЕНИЕ ------------ */ ob_start(); ?>
 
-<h2>Сайт в стадии разработки</h2>
-<hr />
-<? //foreach ($articles as $article) e('articles/widget', $article); ?>
+<? e('frontend/widgets/features') ?>
+<? e('frontend/widgets/call_block') ?>
+<? e('frontend/widgets/main_3_services') ?>
 
 <?php require PHIX_CORE . '/render_view.php';

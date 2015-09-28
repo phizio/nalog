@@ -17,6 +17,8 @@ $db = [
 $app = [
     /* Название приложения и секретный случайный ключ (используется в модуле безопасности f_secure.php) */
     'name'          => 'Nalog',
+    'domain'        => 'nalog.loc',
+    'email'         => 'info@nalog.loc',
     'key'           => '538t5jht8054jht8054jh',
     /* Время жизни токена в минутах (с момента генерации, т.е. вывода формы),
        не рекомендуется более 60, т.к. будет тормозить процедуру валидации токена */
@@ -72,3 +74,5 @@ require_once(PHIX_CORE . '/f_content.php');
 require_once(PHIX_CORE . '/f_secure.php');
 // Короткие алиасы функций
 require_once(PHIX_CORE . '/aliases.php');
+// Регистрация, логин и сессии авторизации на сайте
+require_once(PHIX_CORE . '/f_sessions.php');
