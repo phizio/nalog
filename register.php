@@ -22,12 +22,12 @@ $page['template'] = 'frontend/layout_min';
             <form action="register.php?act=register" method="post">
 
                 <div class="form-group">
-                    <label>Ваше имя</label>
+                    <label>Ваше имя <?= $page['success_msg'] ?></label>
                     <input type="text" name="user_name" class="form-control" placeholder="Имя" value="<?= $user_name ?>" autofocus>
                 </div>
 
                 <div class="form-group">
-                    <label>Адрес электронной почты</label>
+                    <label>Адрес электронной почты <?= $page['error_msg'] ?></label>
                     <input type="text" name="user_email" class="form-control" placeholder="E-mail" value="<?= $user_email ?>">
                 </div>
 
