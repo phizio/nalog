@@ -1,4 +1,4 @@
-<?php require_once 'config.php';
+<?php
 /* ----------------------- ПАРАМЕТРЫ СТРАНИЦЫ ----------------------- */
 $page['title'] = 'Список клиентов';
 $page['desc'] = 'Редактирование данных в табличной форме (CRUD)';
@@ -102,7 +102,7 @@ $page['crud_editor'] = [
 
 require (PHIX_CORE . '/crud_editor/core.php');
 
-/* -------------------------- ОТОБРАЖЕНИЕ ------------ */ ob_start(); ?>
+/* -------------------------- ОТОБРАЖЕНИЕ ------------------------- */?>
 
 <h2><?= $page['title'] ?></h2>
 <hr />
@@ -112,5 +112,3 @@ require (PHIX_CORE . '/crud_editor/core.php');
         <? require MC_ROOT . "/templates/{$page['view']}.php"; ?>
     </div><!-- /.col -->
 </div><!-- /.row -->
-
-<?php require PHIX_CORE . '/render_view.php';

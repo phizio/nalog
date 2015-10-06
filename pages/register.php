@@ -1,5 +1,5 @@
-<?php require_once 'config.php';
-require_once 'config_for_frontend.php';
+<?php
+require_once (MC_ROOT . '/config_for_frontend.php');
 
 /* ----------------------- ПАРАМЕТРЫ СТРАНИЦЫ ----------------------- */
 $page['title'] = 'Регистрация';
@@ -11,7 +11,7 @@ $page['template'] = 'frontend/layout_min';
 
 
 
-/* -------------------------- ОТОБРАЖЕНИЕ ------------ */ ob_start(); ?>
+/* -------------------------- ОТОБРАЖЕНИЕ ------------------------- */?>
 
 <div class="container" style="margin-top: 20px;">
     <div class="row">
@@ -43,6 +43,3 @@ $page['template'] = 'frontend/layout_min';
         </div>
     </div>
 </div>
-
-
-<?php require PHIX_CORE . '/render_view.php';

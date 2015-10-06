@@ -1,15 +1,9 @@
-#Encoding
-AddDefaultCharset utf-8
+AddDefaultCharset utf-8  
 AddCharset utf-8 *
-
-#Error pages
-#ErrorDocument 404 /error-404.html
-#ErrorDocument 403 /error-404.html
-
-#Close folder listings
+ErrorDocument 404 /error-404.php
+ErrorDocument 403 /error-404.php
 Options -Indexes
 
-#Minify headers
 <files *.js.gz>
   AddType "text/javascript" .gz
   AddEncoding gzip .gz
@@ -18,7 +12,6 @@ Options -Indexes
   AddType "text/css" .gz
   AddEncoding gzip .gz
 </files>
-
 RewriteEngine on
 #Check to see if browser can accept gzip files.
 ReWriteCond %{HTTP:accept-encoding} gzip
@@ -28,14 +21,23 @@ ReWriteCond %{REQUEST_FILENAME} !^.+\.gz$
 #check to see if a .gz version of the file exists.
 RewriteCond %{REQUEST_FILENAME}.gz -f
 #All conditions met so add .gz to URL filename (invisibly)
-RewriteRule ^(.+) $1.gz [QSA,L]
+RewriteRule ^(.+) $1.gz [QSA,L] 
 
+# ======================================================
+# ROUTER TYPE 1 (simple /page -> /page.php)
+# ======================================================
+#RewriteRule ^(\w+)$ $1.php [NC]
+
+# ======================================================
+# ROUTER TYPE 2
+# ======================================================
 # Exclude some directories with assets and images from rewrite rules
-# IMPORTANT! 'vendor' folder must be removed from this list in production!
-# (all css & js in 'production' mode will be minimified)
-RewriteRule ^(assets|js|css|images|img|fonts|tmp|vendor)/.*$ - [L]
+RewriteRule ^(assets|js|css|images|img)/.*$ - [L]
 # Exclude image files from rewrite rules
 RewriteRule \.(jpg|jpeg|png|gif|ico)$ - [L]
-# Other requests - to main router
-RewriteRule ^ index.php [L]
 
+# For Friendly URLs
+RewriteCond %{HTTP_HOST} ^(\w*)\.{0,1}nalog\.loc$
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?d=%1&q=$1 [L,QSA]

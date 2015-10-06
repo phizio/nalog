@@ -1,5 +1,5 @@
-<?php require_once 'config.php';
-require_once 'config_for_frontend.php';
+<?php
+require_once (MC_ROOT . '/config_for_frontend.php');
 
 /* ----------------------- ПАРАМЕТРЫ СТРАНИЦЫ ----------------------- */
 $page['title'] = 'Цены';
@@ -10,7 +10,7 @@ $page['template'] = 'frontend/layout_min';
 /* ---------------------- КОНТРОЛЛЕР СТРАНИЦЫ ----------------------- */
 
 
-/* -------------------------- ОТОБРАЖЕНИЕ ------------ */ ob_start(); ?>
+/* -------------------------- ОТОБРАЖЕНИЕ ------------------------- */?>
 
     <section class="pricing_wrapper">
         <div class="container triangles-of-section">
@@ -61,5 +61,3 @@ $page['template'] = 'frontend/layout_min';
             </div>
         </div>
     </section>
-
-<?php require PHIX_CORE . '/render_view.php';

@@ -18,6 +18,8 @@ $app = [
     /* Название приложения и секретный случайный ключ (используется в модуле безопасности f_secure.php) */
     'name'          => 'Nalog',
     'domain'        => 'nalog.loc',
+    'subdomains'    => ['kazan', 'moscow'],
+    '404'           => '/error-404.html',
     'email'         => 'info@nalog.loc',
     'key'           => '538t5jht8054jht8054jh',
     /* Время жизни токена в минутах (с момента генерации, т.е. вывода формы),
@@ -76,3 +78,5 @@ require_once(PHIX_CORE . '/f_secure.php');
 require_once(PHIX_CORE . '/aliases.php');
 // Регистрация, логин и сессии авторизации на сайте
 require_once(PHIX_CORE . '/f_sessions.php');
+// Хелперы
+require_once(PHIX_CORE . '/f_helpers.php');

@@ -1,5 +1,5 @@
-<?php require_once 'config.php';
-require_once 'config_for_frontend.php';
+<?php
+require_once (MC_ROOT . '/config_for_frontend.php');
 
 /* ----------------------- ПАРАМЕТРЫ СТРАНИЦЫ ----------------------- */
 $page['title'] = 'Активация';
@@ -24,7 +24,8 @@ if (!empty($user_id) && !empty($user_activate)) {
     } else $activate_error = "Ошибка! Не найден пользователь с таким id";
 } else {header("Location: /"); exit;}
 
-/* -------------------------- ОТОБРАЖЕНИЕ ------------ */ ob_start(); ?>
+/* -------------------------- ОТОБРАЖЕНИЕ ------------------------- */?>
+
 <div class="container" style="margin-top: 20px;">
     <div class="row">
         <div class="col-sm-4">
@@ -32,7 +33,3 @@ if (!empty($user_id) && !empty($user_activate)) {
         </div>
     </div>
 </div>
-
-
-
-<?php require PHIX_CORE . '/render_view.php';
