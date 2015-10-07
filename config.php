@@ -40,16 +40,22 @@ $page = [
     /* CSS - стили по-умолчанию */
     'css'  => [
         'twbs/bootstrap/dist/css/bootstrap.min.css',
-        'twbs/bootstrap/dist/css/bootstrap-theme.min.css',
+        /*'twbs/bootstrap/dist/css/bootstrap-theme.min.css',*/
         'components/font-awesome/css/font-awesome.min.css',
-        'http://fonts.googleapis.com/css?family=Open+Sans',
-        'main.css',
+        /*'http://fonts.googleapis.com/css?family=Open+Sans',*/
+        'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css',
+        'AdminLTE.min.css',
+        'skins/skin-blue.min.css'
     ],
 
     /* JS - скрипты по-умолчанию */
     'js'  => [
         'components/jquery/jquery.min.js',
         'twbs/bootstrap/dist/js/bootstrap.min.js',
+        '/plugins/slimScroll/jquery.slimscroll.min.js',
+        '/plugins/fastclick/fastclick.min.js',
+        'app.min.js',
+        'demo.js'
     ],
     'js_raw' => '', /* в этой переменной хранится "сырой" js, не подключаемый из файла, а генерируемый "на лету" */
 ];

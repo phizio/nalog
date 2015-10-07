@@ -8,8 +8,6 @@ $page['template'] = 'frontend/layout_min';
 
 /* ---------------------- КОНТРОЛЛЕР СТРАНИЦЫ ----------------------- */
 
-
-
 if (!empty($user_id) && !empty($user_activate)) {
     $user_info = db_row("SELECT * FROM `users` WHERE `id` = '$user_id'");
     if (isset($answ_user)) $user_info = mysql_fetch_assoc($answ_user);
@@ -27,6 +25,9 @@ if (!empty($user_id) && !empty($user_activate)) {
 /* -------------------------- ОТОБРАЖЕНИЕ ------------------------- */?>
 
 <div class="container" style="margin-top: 20px;">
+
+    <? e('sections/alerts') ?>
+
     <div class="row">
         <div class="col-sm-4">
             <a class="btn btn-success" href="/login">Войти на сайт</a>

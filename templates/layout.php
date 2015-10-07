@@ -3,18 +3,31 @@
     <head>
         <? e('sections/head_content') ?>
     </head>
+    <body class="hold-transition skin-blue sidebar-mini">
 
-    <body>
-        <? if ($jcrop_modal_need) e('jcrop/modal') ?>
-        <? e('sections/navbar') ?>
+        <? if ($jcrop_modal_need) e('jcrop/modal'); ?>
 
-        <div class="container">
+        <div class="wrapper">]
 
-            <? e('sections/alerts') ?>
+            <? e('sections/header') ?>
+            <? e('sections/sidebar') ?>
 
-            <?= $content ?>
+            <div class="content-wrapper">
 
-        </div><!-- /.container -->
+                <? e('sections/content_header') ?>
+                <? e('sections/alerts') ?>
+
+                <!-- Main content -->
+                <section class="content">
+                    <?= $content ?>
+                </section>
+
+                <? e('sections/footer') ?>
+                <? e('sections/right_sidebar') ?>
+
+            </div>
+
+        </div><!-- ./wrapper -->
 
         <?= js_resources() ?>
     </body>

@@ -1,12 +1,11 @@
 <?php
 
-// Дефолтные настройки страницы
-$page = [
-    /* Шаблон страницы по-умолчанию */
-    'template'  => 'frontend/layout',
+// Настройки дефолтных значений для frontend-части сайта
 
-    /* CSS - стили по-умолчанию */
-    'css'  => [
+/* Шаблон страницы по-умолчанию */
+$page['template'] = 'frontend/layout';
+/* CSS - стили по-умолчанию */
+$page['css'] = [
         '/css/animate.css',
         '/css/imagelightbox.css',
         '/css/style.css',
@@ -18,10 +17,9 @@ $page = [
         '/js/isotope/css/style.css',
         '/css/simpletextrotator.css',
         '/css/_style_switcher.css',
-    ],
-
-    /* JS - скрипты по-умолчанию */
-    'js'  => [
+];
+/* JS - скрипты по-умолчанию */
+$page['js'] = [
         '/js/jquery-1.10.2.min.js',
         'twbs/bootstrap/dist/js/bootstrap.min.js',
         '/js/woothemes-FlexSlider-06b12f8/jquery.flexslider-min.js',
@@ -34,6 +32,6 @@ $page = [
         '/js/collapser.js',
         '/js/tweetie/tweetie.min.js',
         '/js/style_switcher.js',
-    ],
-    'js_raw' => '', /* в этой переменной хранится "сырой" js, не подключаемый из файла, а генерируемый "на лету" */
 ];
+/* в этой переменной хранится "сырой" js, не подключаемый из файла, а генерируемый "на лету" */
+$page['js_raw'] = '';

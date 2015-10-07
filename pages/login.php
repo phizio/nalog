@@ -13,6 +13,9 @@ if ( auth() ) {header("Location: /profile"); exit;}
 
 /* -------------------------- ОТОБРАЖЕНИЕ ------------------------- */?>
 <div class="container" style="margin-top: 20px;">
+
+    <? e('sections/alerts') ?>
+
     <div class="row">
         <div class="col-sm-4">
             <form action="login.php" method="post">
@@ -36,4 +39,5 @@ if ( auth() ) {header("Location: /profile"); exit;}
             </form>
         </div>
     </div>
+
 </div>
