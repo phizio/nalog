@@ -7,7 +7,7 @@
 
         <? if ($jcrop_modal_need) e('jcrop/modal'); ?>
 
-        <div class="wrapper">]
+        <div class="wrapper">
 
             <? e('sections/header') ?>
             <? e('sections/sidebar') ?>
@@ -22,10 +22,10 @@
                     <?= $content ?>
                 </section>
 
-                <? e('sections/footer') ?>
-                <? e('sections/right_sidebar') ?>
-
             </div>
+
+            <? e('sections/footer') ?>
+            <? e('sections/right_sidebar') ?>
 
         </div><!-- ./wrapper -->
 
