@@ -43,7 +43,7 @@ ob_start();
 // Проверка существования файла страницы
 if (!file_exists(MC_ROOT . "/pages" . $path))
     redirect(404);
-elseif ($path='/error-404.php')
+elseif ($path=='/error-404.php')
     header('HTTP/1.1 404 Not Found');
 require(MC_ROOT . "/pages" . $path);
 // Завершение рендеринга страницы

@@ -16,7 +16,7 @@ $page['template'] = 'frontend/layout_min';
 resource([
     'https://dadata.ru/static/css/lib/suggestions-15.8.css',
     'https://dadata.ru/static/js/lib/jquery.suggestions-15.8.min.js',
-    '/assets/js/reports-ex.js'
+    '/assets/js/pages/reports-ex.js'
 ]);
 
 
