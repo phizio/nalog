@@ -11,3 +11,5 @@ vendor/
 tmp/
 tmp/cache_table
 local/
+
+composer.lock

@@ -1,6 +1,19 @@
 <?php
 require_once 'config.php';
 
+function redirect($url)
+{
+    if (preg_match('/^\d+$/', $url)) {
+        if ($url==404) {
+            $url='/error-404.php';
+            header('HTTP/1.1 404 Not Found');
+            header('location:'.$url);
+        }
+    } else
+        header('location:' . $url);
+    exit('<a href="'.$url.'">You will be redirected to: '.$_SERVER['HTTP_HOST'].$url.'</a>');
+}
+
 // Анализ поддоменов
 $host_arr = explode('.', $_SERVER['HTTP_HOST']);
 if (count($host_arr) == 3) {
@@ -28,6 +41,10 @@ else {
 
 ob_start();
 // Проверка существования файла страницы
-if (! @require(MC_ROOT . "/pages" . $path)) redirect(404);
+if (!file_exists(MC_ROOT . "/pages" . $path))
+    redirect(404);
+elseif ($path='/error-404.php')
+    header('HTTP/1.1 404 Not Found');
+require(MC_ROOT . "/pages" . $path);
 // Завершение рендеринга страницы
 require PHIX_CORE . '/render_view.php';

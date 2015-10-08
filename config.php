@@ -8,8 +8,8 @@ define('CACHE_DIR', '/tmp/cache');
 
 // Учетные данные для соединения с базой данных MySQL
 $db = [
-    'username'  => 'team',
-    'password'  => '12041961',
+    'username'  => 'root',
+    'password'  => '',
     'host'      => 'localhost',
     'base'      => 'nalog',
 ];
@@ -17,11 +17,11 @@ $db = [
 $app = [
     /* Название приложения и секретный случайный ключ (используется в модуле безопасности f_secure.php) */
     'name'          => 'Nalog',
-    'domain'        => 'nalog.loc',
+    'domain'        => 'nalog.phix',
     'subdomains'    => ['kazan', 'moscow'],
     '404'           => '/error-404.html',
-    'email'         => 'info@nalog.loc',
-    'key'           => '538t5jht8054jht8054jh',
+    'email'         => 'info@nalog.phix',
+    'key'           => '538t5jht804jht8054jh',
     /* Время жизни токена в минутах (с момента генерации, т.е. вывода формы),
        не рекомендуется более 60, т.к. будет тормозить процедуру валидации токена */
     'token_lifetime'=> 5,
@@ -85,4 +85,4 @@ require_once(PHIX_CORE . '/aliases.php');
 // Регистрация, логин и сессии авторизации на сайте
 require_once(PHIX_CORE . '/f_sessions.php');
 // Хелперы
-require_once(PHIX_CORE . '/f_helpers.php');
+//require_once(PHIX_CORE . '/f_helpers.php');
