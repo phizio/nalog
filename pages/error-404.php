@@ -23,7 +23,7 @@ JS
 
 <section>
     <div class="container">
-        <div class="search_form">
+        <div class="search_form" style="display:none">
             <form name="search_form" id="search_form" method="post" action="#">
                 <div class="row">
                     <div class="col-sm-2 col-md-2"></div>
