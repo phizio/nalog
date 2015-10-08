@@ -78,6 +78,58 @@ INSERT INTO `users` (`id`, `name`, `login`, `pass`, `address`, `company`, `bank`
 (5, 'Варламова Екатерина Сергеевна', '', '', 'г Казань, ул Кутузова', 'ООО БИН-Консалтинг', 'ООО КБЭР &quot;БАНК КАЗАНИ&quot;', 'ekaterina@rambler.ru', '', '', '', '2015-09-23 09:29:53', '0000-00-00 00:00:00'),
 (10, 'Роман', 'id440487@yandex.ru', '8f9f75f126625be84bfdbfa7685f20de21ee3113', '', '', '', 'id440487@yandex.ru', '', '00921a9c', '', '2015-09-28 15:20:58', '0000-00-00 00:00:00');
 
+DROP TABLE IF EXISTS `companies`;
+
+CREATE TABLE `companies` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `people_id` int(11) unsigned NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `update_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `delete_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `value` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `unrestricted_value` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `address.value` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `address.data` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
+  `branch_count` int(6) unsigned NOT NULL,
+  `branch_type` varchar(6) COLLATE utf8_unicode_ci NOT NULL,
+  `inn` int(12) unsigned NOT NULL,
+  `kpp` int(9) unsigned NOT NULL,
+  `name.full_with_opf` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name.short_with_opf` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `name.latin` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name.full` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `name.short` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `okpo` int(10) unsigned NOT NULL,
+  `okved` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
+  `opf.code` int(11) unsigned NOT NULL,
+  `opf.short` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  `opf.full` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `state.actuality_date` int(15) unsigned NOT NULL,
+  `state.registration_date` int(15) unsigned NOT NULL,
+  `state.liquidation_date` int(15) unsigned NOT NULL,
+  `state.status` varchar(11) COLLATE utf8_unicode_ci NOT NULL,
+  `type` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci CHECKSUM=1 DELAY_KEY_WRITE=1 ROW_FORMAT=DYNAMIC;
+
+/*Data for the table `companies` */
+
+/*Table structure for table `peoples` */
+
+DROP TABLE IF EXISTS `peoples`;
+
+CREATE TABLE `peoples` (
+  `id` int(11) unsigned NOT NULL,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `update_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `delete_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `peoples` */
+
+
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
