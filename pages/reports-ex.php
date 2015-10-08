@@ -19,8 +19,12 @@ $act = isset($_GET['act']) ? $_GET['act'] : '';
 $print='';
 switch ($act) {
     default:
-        $print.='<a href="?act=excel">Excel example</a></br/>';
-        $print.='<a href="?act=word">Word example</a></br/>';
+        $print.='<a class="btn btn-success" href="?act=excel">'
+            .'<i class="fa fa-file-excel-o"></i> '
+            .'Пример создания документа в Excel</a></br/></br/>';
+        $print.='<a class="btn btn-info" href="?act=word">'
+            .'<i class="fa fa-file-word-o"></i> '
+            .'Пример создания документа в Word</a></br/>';
         break;
 
     /*example create docx pattern*/
