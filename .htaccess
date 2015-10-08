@@ -33,7 +33,7 @@ RewriteRule ^(.+) $1.gz [QSA,L]
 # Exclude some directories with assets and images from rewrite rules
 # IMPORTANT! 'vendor' folder must be removed from this list in production!
 # (all css & js in 'production' mode will be minimified)
-RewriteRule ^(assets|js|css|images|img|fonts|tmp|plugins|vendor)/.*$ - [L]
+RewriteRule ^(assets|js|css|images|img|fonts|tmp|local|plugins|vendor)/.*$ - [L]
 # Exclude image files from rewrite rules
 RewriteRule \.(jpg|jpeg|png|gif|ico)$ - [L]
 # Other requests - to main router
