@@ -39,3 +39,4 @@ RewriteRule \.(jpg|jpeg|png|gif|ico)$ - [L]
 # Other requests - to main router
 RewriteRule ^ index.php [L]
 
+ErrorDocument 404 /error-404.php
