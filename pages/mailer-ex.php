@@ -5,13 +5,13 @@
  * Date: 08.10.2015
  * Time: 20:44
  */
-require_once (MC_ROOT . '/config_for_frontend.php');
+//require_once (MC_ROOT . '/config_for_frontend.php');
 require_once (MC_ROOT . '/vendor/alexkonov/mailer/class/mailer.php');
 
 /* ----------------------- ПАРАМЕТРЫ СТРАНИЦЫ ----------------------- */
 $page['title'] = 'Демонстрация отправки почты';
-$page['desc'] = 'Демка';
-$page['template'] = 'frontend/layout_min';
+$page['desc'] = '';
+//$page['template'] = 'frontend/layout_min';
 
 /* ---------------------- КОНТРОЛЛЕР СТРАНИЦЫ ----------------------- */
 $print='';
@@ -43,7 +43,7 @@ if (isset($_REQUEST['send'])) {
 }
 
 if (isset($send))
-    $print.='<div class="col-md-12"><div class="download">'.($send===true?'Сообщение успешно отправлена.':'Произошла ошибка.').'</div></div>';
+    $page['success_msg']=$send===true?'Сообщение успешно отправлена.':'Произошла ошибка.';
 
 $get=function ($str) {
      return $str;
@@ -87,7 +87,7 @@ $print.=  <<<START
 
             <div class="form-group" >
                 <div class="col-md-12" >
-                    <button type = "submit" class="btn btn-success" style = "width:100%;" name = "send" >Отправить</button >
+                    <button type = "submit" class="btn btn-success" name = "send" >Отправить</button >
                 </div >
             </div >
         </form >
