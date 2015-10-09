@@ -43,8 +43,7 @@ if (isset($_REQUEST['send'])) {
 }
 
 if (isset($send))
-    $page['success_msg']=$send===true?'Сообщение успешно отправлена.':'Произошла ошибка.';
-
+    $page[$send===true?'success_msg':'error_msg']=$send===true?'Сообщение успешно отправлена.':'Произошла ошибка: "'.$mail->ErrorInfo.'"';
 $get=function ($str) {
      return $str;
 };
@@ -86,8 +85,8 @@ $print.=  <<<START
             </div >
 
             <div class="form-group" >
-                <div class="col-md-12" >
-                    <button type = "submit" class="btn btn-success" name = "send" >Отправить</button >
+                <div class="col-md-12" style="text-align:right">
+                    <button type = "submit" class="btn btn-primary" name = "send" style="width:150px">Отправить</button >
                 </div >
             </div >
         </form >
@@ -99,20 +98,10 @@ START;
     div.content {
         margin:25px auto 0;
         padding:30px 0 0 0;
+        width:70%;
     }
 
-    div.download {
-        text-align: center;
-        font-size:20px;
-        color:#e00;
-        margin:0 0 30px 0;
-    }
-
-    div.download a {
-        font-weight: bold;
-    }
-
-    .clear {
+     .clear {
         clear: both;
     }
 </style>

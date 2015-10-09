@@ -6,13 +6,14 @@
  * Time: 15:47
  */
 
-require_once(MC_ROOT . '/config_for_frontend.php');
+//require_once(MC_ROOT . '/config_for_frontend.php');
 require_once(MC_ROOT . '/vendor/alexkonov/docreports/class/docReports.php');
 
 /* ----------------------- ПАРАМЕТРЫ СТРАНИЦЫ ----------------------- */
 $page['title'] = 'Демонстрация генерации отчетов';
-$page['desc'] = 'Демка';
-$page['template'] = 'frontend/layout_min';
+$page['desc'] = '';
+//$page['template'] = 'frontend/layout_min';
+
 resource([
     'https://dadata.ru/static/css/lib/suggestions-15.8.css',
     'https://dadata.ru/static/js/lib/jquery.suggestions-15.8.min.js',
@@ -47,7 +48,8 @@ switch ($act) {
         }
 
         if (isset($download))
-            $print .= '<div class="col-md-12"><div class="download">Файл успешно сгенерирован, <a href="' . $download . '">скачать</a>.</div></div>';
+            $page['success_msg']= 'Файл успешно сгенерирован, <a href="' . $download . '">скачать</a>.';
+        $print.='<h3>Генерация Word</h3>';
         $print .= '       <form class="form-horizontal" action="?act=word" method="post" data-role="word">';
         $print .= '            <div class="form-group">';
         $print .= '                <label class="col-md-4 control-label">Наименование ООО:</label>';
@@ -140,8 +142,8 @@ switch ($act) {
         $print .= '                </div>';
         $print .= '            </div>';
         $print .= '            <div class="form-group">';
-        $print .= '                <div class="col-md-12">';
-        $print .= '                    <button type="submit" class="btn btn-primary" style="width:100%;" name="genre" data-role="genre">Сгенерировать</button>';
+        $print .= '                <div class="col-md-12" style="text-align: right;">';
+        $print .= '                    <button type="submit" class="btn btn-primary" style="width:150px;" name="genre" data-role="genre">Сгенерировать</button>';
         $print .= '                </div>';
         $print .= '            </div>';
         $print .= '        </form>';
@@ -155,9 +157,9 @@ switch ($act) {
             $report->setData($data, $download);
 
         }
-
         if (isset($download))
-            $print .= '<div class="col-md-12"><div class="download">Файл успешно сгенерирован, <a href="' . $download . '">скачать</a>.</div></div>';
+            $page['success_msg']= 'Файл успешно сгенерирован, <a href="' . $download . '">скачать</a>.';
+        $print.='<h3>Генерация Excel</h3>';
         $print .= '       <form class="form-horizontal" action="?act=excel" method="post" data-role="excel">';
         $print .= '            <div class="form-group">';
         $print .= '                <label class="col-md-4 control-label">Полное имя:</label>';
@@ -188,8 +190,8 @@ switch ($act) {
         $print .= '            </div>';
 
         $print .= '            <div class="form-group">';
-        $print .= '                <div class="col-md-12">';
-        $print .= '                    <button type="submit" class="btn btn-primary" style="width:100%;" name="genre" data-role="genre">Сгенерировать</button>';
+        $print .= '                <div class="col-md-12" style="text-align: right;">';
+        $print .= '                    <button type="submit" class="btn btn-primary" style="width:150px;" name="genre" data-role="genre">Сгенерировать</button>';
         $print .= '                </div>';
         $print .= '            </div>';
         $print .= '        </form>';
@@ -201,17 +203,7 @@ switch ($act) {
 <style>
     div.content {
         margin: 25px auto 0;
-    }
-
-    div.download {
-        text-align: center;
-        font-size: 20px;
-        color: #e00;
-        margin: 0 0 30px 0;
-    }
-
-    div.download a {
-        font-weight: bold;
+        width: 70%;
     }
 
     .clear {
