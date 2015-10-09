@@ -4,7 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5e762489c9a88c11df9922224ef4667f",
+    "hash": "e844bfbe8cae75539b3a2cde07364659",
+    "content-hash": "10a7011fbe7ffd162d2230d295e8c42a",
     "packages": [
         {
             "name": "alexkonov/docreports",
@@ -38,6 +39,38 @@
             "description": "Create reports of document template.",
             "homepage": "http://alex.devlc.ru",
             "time": "2015-10-08 09:06:04"
+        },
+        {
+            "name": "alexkonov/mailer",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AlexKonov/mailer.git",
+                "reference": "da0a9022c6e8b278611bf94ecd3b144a83824670"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AlexKonov/mailer/zipball/da0a9022c6e8b278611bf94ecd3b144a83824670",
+                "reference": "da0a9022c6e8b278611bf94ecd3b144a83824670",
+                "shasum": ""
+            },
+            "require": {
+                "phpmailer/phpmailer": "v5.2.13"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Konov",
+                    "email": "a.a.konov@mail.ru"
+                }
+            ],
+            "description": "Send email.",
+            "homepage": "http://alex.devlc.ru",
+            "time": "2015-10-09 08:46:03"
         },
         {
             "name": "blueimp/jquery-file-upload",
@@ -365,6 +398,66 @@
                 "phix"
             ],
             "time": "2015-09-29 07:05:41"
+        },
+        {
+            "name": "phpmailer/phpmailer",
+            "version": "v5.2.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PHPMailer/PHPMailer.git",
+                "reference": "45df3a88f7f46071e10d0b600f228d19f95911b3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/45df3a88f7f46071e10d0b600f228d19f95911b3",
+                "reference": "45df3a88f7f46071e10d0b600f228d19f95911b3",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "*",
+                "phpunit/phpunit": "4.7.*"
+            },
+            "suggest": {
+                "league/oauth2-client": "Needed for Gmail's XOAUTH2 authentication system"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class.phpmailer.php",
+                    "class.phpmaileroauth.php",
+                    "class.phpmaileroauthgoogle.php",
+                    "class.smtp.php",
+                    "class.pop3.php",
+                    "extras/EasyPeasyICS.php",
+                    "extras/ntlm_sasl_client.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-2.1"
+            ],
+            "authors": [
+                {
+                    "name": "Jim Jagielski",
+                    "email": "jimjag@gmail.com"
+                },
+                {
+                    "name": "Marcus Bointon",
+                    "email": "phpmailer@synchromedia.co.uk"
+                },
+                {
+                    "name": "Andy Prevost",
+                    "email": "codeworxtech@users.sourceforge.net"
+                },
+                {
+                    "name": "Brent R. Matzelle"
+                }
+            ],
+            "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
+            "time": "2015-09-14 09:18:12"
         },
         {
             "name": "phpoffice/phpexcel",

@@ -25,25 +25,17 @@ foreach ($files as $file)
 if (isset($_REQUEST['send'])) {
     $p=intval($_REQUEST['page']);
     if (isset($pages[$p])) {
-        $mail = new mailer('mailtrap.io', 2525, '4643500c521769f5b', '78aaa57f0e395d', $_REQUEST['name']);
-        $images = [];
+        $mail = new mailer($_REQUEST['name']);
+        if ($app['smtp'])
+            $mail->setSMTP($app['smtp']['server'], $app['smtp']['port'], $app['smtp']['user'], $app['smtp']['password']);
         $html = file_get_contents($dir.'/'.$pages[$p]);
-        preg_match_all('/<img[^<]*src[^"]{1,}(\'|")(.*?)\\1[^>]*>/si', $html, $result);
-        $result = array_unique($result[2]);
-        foreach ($result as $file) {
-            $cid = md5($file);
-            $html = str_replace($file, 'cid:' . $cid, $html);
-            $images[] = [
-                'path' => $dir.'/' . $file,
-                'cid' => $cid
-            ];
-        }
-        $send=$mail->send($_REQUEST['to'], $_REQUEST['subject'], $html, $images);
+        $send=$mail->send($_REQUEST['to'], $_REQUEST['subject'], $html, $dir);
     }
 }
 
 if (isset($send))
-    $page[$send===true?'success_msg':'error_msg']=$send===true?'Сообщение успешно отправлена.':'Произошла ошибка: "'.$mail->ErrorInfo.'"';
+    $page[($send===true?'success':'error').'_msg']=$send===true?'Сообщение успешно отправлена.':'Произошла ошибка: "'.$mail->ErrorInfo.'"';
+
 $get=function ($str) {
      return $str;
 };
@@ -85,8 +77,8 @@ $print.=  <<<START
             </div >
 
             <div class="form-group" >
-                <div class="col-md-12" style="text-align:right">
-                    <button type = "submit" class="btn btn-primary" name = "send" style="width:150px">Отправить</button >
+                <div class="col-md-12" style="text-align: right;">
+                    <button type = "submit" class="btn btn-primary" name = "send" style="width:150px;">Отправить</button >
                 </div >
             </div >
         </form >
@@ -96,12 +88,11 @@ START;
 /* -------------------------- ОТОБРАЖЕНИЕ ------------------------- */?>
 <style>
     div.content {
-        margin:25px auto 0;
-        padding:30px 0 0 0;
-        width:70%;
+        margin: 25px auto 0;
+        width: 70%;
     }
 
-     .clear {
+    .clear {
         clear: both;
     }
 </style>
