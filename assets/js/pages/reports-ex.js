@@ -15,6 +15,13 @@ function suggestions($el, type, key, onSelect) {
                 if (key) {
                     if (key == 'unrestricted_value' || key == 'value') {
                         $el.val(suggestion[key]);
+                    } else if ($.isArray(key)){
+                        var value = data[key[0]];
+                        for (var i = 1; i < key.length; i++)
+                            value = value[key[i]];
+                        $el.val(value);
+                        if (onSelect)
+                            onSelect(suggestion);
                     } else {
                         key = key.split('.');
                         var value = data[key[0]];
