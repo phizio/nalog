@@ -23,11 +23,10 @@
                 </section>
 
             </div>
-
-            <? e('sections/footer') ?>
-            <? e('sections/right_sidebar') ?>
-
         </div><!-- ./wrapper -->
+
+        <? e('sections/footer') ?>
+        <? e('sections/right_sidebar') ?>
 
         <?= js_resources() ?>
     </body>
