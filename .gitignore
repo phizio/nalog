@@ -2,7 +2,7 @@
 .idea/
 
 # Config file
-# config.php
+config.php
 
 # non-use folders
 vendor/
@@ -11,4 +11,7 @@ vendor/
 tmp/
 tmp/cache_table
 
-composer.lock
+*.lock
+
+local/demo.docx
+local/demo.xlsx

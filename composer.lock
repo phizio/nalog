@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e844bfbe8cae75539b3a2cde07364659",
-    "content-hash": "10a7011fbe7ffd162d2230d295e8c42a",
+    "hash": "5e762489c9a88c11df9922224ef4667f",
+    "content-hash": "63a55c801c6907eab8ffc99e7ca91a26",
     "packages": [
         {
             "name": "alexkonov/docreports",
-            "version": "1.0",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AlexKonov/docreports.git",
-                "reference": "5052d542fc72061d4dd8f367affebaba9a40a4ed"
+                "reference": "8b5886fdcc6f10aa83d0bb368ccda2555abaa1bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AlexKonov/docreports/zipball/5052d542fc72061d4dd8f367affebaba9a40a4ed",
-                "reference": "5052d542fc72061d4dd8f367affebaba9a40a4ed",
+                "url": "https://api.github.com/repos/AlexKonov/docreports/zipball/8b5886fdcc6f10aa83d0bb368ccda2555abaa1bc",
+                "reference": "8b5886fdcc6f10aa83d0bb368ccda2555abaa1bc",
                 "shasum": ""
             },
             "require": {
@@ -38,20 +38,20 @@
             ],
             "description": "Create reports of document template.",
             "homepage": "http://alex.devlc.ru",
-            "time": "2015-10-08 09:06:04"
+            "time": "2015-10-08 11:06:22"
         },
         {
             "name": "alexkonov/mailer",
-            "version": "1.1",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/AlexKonov/mailer.git",
-                "reference": "da0a9022c6e8b278611bf94ecd3b144a83824670"
+                "reference": "1f127d76e212ac66cf76ecd0d973827cd01a771b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/AlexKonov/mailer/zipball/da0a9022c6e8b278611bf94ecd3b144a83824670",
-                "reference": "da0a9022c6e8b278611bf94ecd3b144a83824670",
+                "url": "https://api.github.com/repos/AlexKonov/mailer/zipball/1f127d76e212ac66cf76ecd0d973827cd01a771b",
+                "reference": "1f127d76e212ac66cf76ecd0d973827cd01a771b",
                 "shasum": ""
             },
             "require": {
@@ -70,7 +70,7 @@
             ],
             "description": "Send email.",
             "homepage": "http://alex.devlc.ru",
-            "time": "2015-10-09 08:46:03"
+            "time": "2015-10-09 09:56:51"
         },
         {
             "name": "blueimp/jquery-file-upload",
@@ -369,19 +369,20 @@
         },
         {
             "name": "phizio/phix",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phizio/phix.git",
-                "reference": "2dfac2e06811fb02f8d8ff65af9cae278b8cf3aa"
+                "reference": "e5b0c0deba694206e1f4ff01769c728aac3a07d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phizio/phix/zipball/2dfac2e06811fb02f8d8ff65af9cae278b8cf3aa",
-                "reference": "2dfac2e06811fb02f8d8ff65af9cae278b8cf3aa",
+                "url": "https://api.github.com/repos/phizio/phix/zipball/e5b0c0deba694206e1f4ff01769c728aac3a07d2",
+                "reference": "e5b0c0deba694206e1f4ff01769c728aac3a07d2",
                 "shasum": ""
             },
             "require": {
+                "alexkonov/mailer": "^1.0",
                 "components/font-awesome": "^4.4",
                 "components/jquery": "^2.1",
                 "datatables/datatables": "^1.10",
@@ -397,7 +398,7 @@
                 "framework",
                 "phix"
             ],
-            "time": "2015-09-29 07:05:41"
+            "time": "2015-10-10 08:29:19"
         },
         {
             "name": "phpmailer/phpmailer",
