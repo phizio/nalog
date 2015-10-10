@@ -11,4 +11,7 @@ vendor/
 tmp/
 tmp/cache_table
 
-composer.lock
+*.lock
+
+local/demo.docx
+local/demo.xlsx
