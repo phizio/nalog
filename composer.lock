@@ -39,6 +39,41 @@
             "description": "Create reports of document template.",
             "homepage": "http://alex.devlc.ru",
             "time": "2015-10-08 11:06:22"
+<<<<<<< HEAD
+        },
+        {
+            "name": "alexkonov/mailer",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AlexKonov/mailer.git",
+                "reference": "1f127d76e212ac66cf76ecd0d973827cd01a771b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AlexKonov/mailer/zipball/1f127d76e212ac66cf76ecd0d973827cd01a771b",
+                "reference": "1f127d76e212ac66cf76ecd0d973827cd01a771b",
+                "shasum": ""
+            },
+            "require": {
+                "phpmailer/phpmailer": "v5.2.13"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "proprietary"
+            ],
+            "authors": [
+                {
+                    "name": "Alexander Konov",
+                    "email": "a.a.konov@mail.ru"
+                }
+            ],
+            "description": "Send email.",
+            "homepage": "http://alex.devlc.ru",
+            "time": "2015-10-09 09:56:51"
+=======
+>>>>>>> bc3aad27622c909495e3858bae2020a885ec0152
         },
         {
             "name": "blueimp/jquery-file-upload",
@@ -337,19 +372,20 @@
         },
         {
             "name": "phizio/phix",
-            "version": "1.1.1",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phizio/phix.git",
-                "reference": "2dfac2e06811fb02f8d8ff65af9cae278b8cf3aa"
+                "reference": "e5b0c0deba694206e1f4ff01769c728aac3a07d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phizio/phix/zipball/2dfac2e06811fb02f8d8ff65af9cae278b8cf3aa",
-                "reference": "2dfac2e06811fb02f8d8ff65af9cae278b8cf3aa",
+                "url": "https://api.github.com/repos/phizio/phix/zipball/e5b0c0deba694206e1f4ff01769c728aac3a07d2",
+                "reference": "e5b0c0deba694206e1f4ff01769c728aac3a07d2",
                 "shasum": ""
             },
             "require": {
+                "alexkonov/mailer": "^1.0",
                 "components/font-awesome": "^4.4",
                 "components/jquery": "^2.1",
                 "datatables/datatables": "^1.10",
@@ -365,7 +401,7 @@
                 "framework",
                 "phix"
             ],
-            "time": "2015-09-29 07:05:41"
+            "time": "2015-10-10 08:29:19"
         },
         {
             "name": "phpoffice/phpexcel",
