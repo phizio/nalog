@@ -12,7 +12,7 @@
             </div>
         </div>
         <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
+        <form action="#" method="get" class="sidebar-form" style="display: none">
             <div class="input-group">
                 <input type="text" name="q" class="form-control" placeholder="Search...">
               <span class="input-group-btn">
@@ -22,6 +22,34 @@
         </form>
         <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
+
+        <ul class="sidebar-menu">
+            <li class="header">Демострации</li>
+
+            <li>
+                <a href="/reports-ex.php?act=excel">
+                    <i class="fa fa-file-excel-o"></i> Генерация excel
+                </a>
+            </li>
+            <li>
+                <a href="/reports-ex.php?act=word">
+                    <i class="fa fa-file-word-o"></i> Генерация word
+                </a>
+            </li>
+            <li>
+                <a href="/mailer-ex.php">
+                    <i class="fa fa-envelope-o"></i> Отправка email
+                </a>
+            </li>
+            <li>
+                <a href="/error-404.php">
+                    <i class="fa fa-warning"></i> Страница 404
+                </a>
+            </li>
+
+        </ul>
+
+        <!--
         <ul class="sidebar-menu">
             <li class="header">MAIN NAVIGATION</li>
             <li class="treeview">
@@ -157,6 +185,8 @@
             <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
             <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
         </ul>
+-->
+
     </section>
     <!-- /.sidebar -->
 </aside>
