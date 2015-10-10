@@ -33,8 +33,8 @@ $app = [
     'smtp' => [
         'server' => 'mailtrap.io',
         'port' => 2525,
-        'user' => '4643500c521769f5b',
-        'password' => '78aaa57f0e395d'
+        'user' => '43282486f55247ae5',
+        'password' => '406530f0e50cb9'
     ]
 ];
 
